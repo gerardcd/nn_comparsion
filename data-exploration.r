@@ -54,10 +54,11 @@ shuttle.PCA$var$contrib
 cor(shuttle.trn$V8, shuttle.trn$V9)
 
 # Plot individuals with it's classes in PCA's dimensions
+# The individuals in each class seem to conform a more or less compact cluster (or separated but still compact sub-clusters) in the PCA dimension space. 
+# A neural network with one hidden layer and not a lot of hidden newrons should work.
 plot(shuttle.PCA, axes = c(1, 2), habillage=10, title="Plot of individuals", xlim=c(-10,10), ylim=c(-10,10), labels=c())
-plot(shuttle.PCA, axes = c(1, 3), habillage=10, title="Plot of individuals", xlim=c(-10,10), ylim=c(-10,10), labels=c())
 
 Psi = shuttle.PCA$ind$coord
 plot3d(Psi[,1], Psi[,2], Psi[,3], col=shuttle.trn$V10,"Dim1", "Dim2", "Dim3",main="Crabs Data", pch=20,
-       xlim=c(-10,10), ylim=c(-10,10), zlim=c(-10,10))
+       xlim=c(-5,5), ylim=c(-5,5), zlim=c(-5,5))
 
