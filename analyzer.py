@@ -32,7 +32,6 @@ def runInstance(model, hidden_neurons, epochs):
 
 	return (tst_accuracy, elapsed_time)
 
-'''
 # TIME AND ACCURACY EXPERIMENTS
 
 twos = [2**x for x in range(6)]
@@ -55,7 +54,7 @@ with open('results/keras_results.csv', 'a') as keras_results, open('results/neur
 
 			(tst_accuracy, elapsed_time) = runInstance(NN, hidden_neurons, epochs)
 			neural_results.write(str(hidden_neurons) + ', ' + str(epochs) + ', ' + str(tst_accuracy) + ', ' + str(elapsed_time) + '\n')
-'''
+
 
 # KERAS LONG RUN EXPERIMENTS
 
