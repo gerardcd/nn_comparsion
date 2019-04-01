@@ -42,6 +42,7 @@ plot(keras_results[keras_results$epochs == 32, c(1,4)], col='yellow', type='o', 
 par(new=TRUE)
 plot(neural_results[neural_results$epochs == 32, c(1,4)], col='green', type='o', ylim=c(10, 35))
 par(new=FALSE)
+legend(27, 20, legend=c('Keras', 'NN'), fill=c('yellow', 'green'))
 
 # ACCURACY
 
@@ -76,7 +77,7 @@ plot3d(neural_results[, c(1,2,3)], type='s', col='blue')
 plot(keras_results[keras_results$epochs == 32, c(1,3)], col='yellow', type='l', ylim=c(0, 1))
 par(new=TRUE)
 plot(neural_results[neural_results$epochs == 32, c(1,3)], col='green', type='l', ylim=c(0, 1))
-
+legend(25, 0.2, legend=c('Keras', 'NN'), fill=c('yellow', 'green'))
 
 # KERAS LONG RUN
 

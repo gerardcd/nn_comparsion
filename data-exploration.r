@@ -34,6 +34,7 @@ freqsTable <- data.frame(hist.tst$counts, hist.tst.expected_class_counts);
 # Plot combined histograms
 par(mfrow=c(1,1))
 barplot(t(as.matrix(freqsTable)), ylab='Count', xlab='Categories', beside=TRUE, col=c('green', 'yellow'));
+legend(13, 3000, legend=c('Expected count', 'Real count'), fill=c('yellow', 'green'))
 
 # Chi square test
 # p-value greater than significance level = .05 (at a confidence of .95) => can't reject null hipothesys that the distributions are the same
